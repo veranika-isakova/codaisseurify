@@ -22,6 +22,7 @@
     <p>Name of the song: <%= song.song_name %></p>
     <p>Album: <%= song.album_name %></p>
     <p>Released: <%= song.release_date %></p>
+    <%= link_to "Delete", song_path( song.id ), class: "btn btn-default", method: :delete, data: { confirm: "Are you sure?" } %>
     <hr>
     <% end %>
 

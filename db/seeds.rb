@@ -1,6 +1,8 @@
 User.destroy_all
 Song.destroy_all
+Photo.destroy_all
 Artist.destroy_all
+
 
 #users
 valerii = User.create!(
