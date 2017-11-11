@@ -2,6 +2,10 @@
   <div class="panel-heading"><%= @artist.name %></div>
 
   <div class="panel-body">
+    <!-- Photos -->
+    <% @artist.photos.each do |photo| %>
+      <%= image_tag photo.image %>
+    <% end %>
 
     <!-- Main Info -->
     <h4>Information</h4>

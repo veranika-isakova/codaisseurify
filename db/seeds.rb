@@ -75,3 +75,8 @@ song_6 = Song.create!(
   release_date: 2009,
   artist: the_xx
 )
+#photos
+photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/veranikaisakova/image/upload/v1510427478/Bob-Dylan-Picture-1960s-Style-Sunglasses_j4dbks.jpg", artist: bob_dylan)
+photo2 = Photo.create!(remote_image_url: "http://res.cloudinary.com/veranikaisakova/image/upload/v1510428117/a276a56ab39b41f68ce338cee2f6a275_qvyi88.jpg", artist: radiohead)
+photo3 = Photo.create!(remote_image_url: "http://res.cloudinary.com/veranikaisakova/image/upload/v1510428156/vgupa0jpkeie0wr0j8er_c4c6oj.jpg", artist: nirvana)
+photo4 = Photo.create!(remote_image_url: "http://res.cloudinary.com/veranikaisakova/image/upload/v1510428057/thexxTOL260110_o5osj3.jpg", artist: the_xx)
