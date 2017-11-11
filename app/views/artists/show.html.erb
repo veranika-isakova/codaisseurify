@@ -1,0 +1,26 @@
+<div class="panel panel-primary">
+  <div class="panel-heading"><%= @artist.name %></div>
+
+  <div class="panel-body">
+
+    <!-- Main Info -->
+    <h4>Information</h4>
+    <p>Country: <%= @artist.country %></p>
+    <p>Official site: <%= link_to @artist.official_site, @artist.official_site %></p>
+    <p>Biography: <%= @artist.biography %></p>
+
+    <!-- List of songs -->
+    <h4>List of songs</h4>
+    <hr>
+    <% @artist.songs.each do |song| %>
+    <p>Name of the song: <%= song.song_name %></p>
+    <p>Album: <%= song.album_name %></p>
+    <p>Released: <%= song.release_date %></p>
+    <hr>
+    <% end %>
+
+  </div>
+
+</div>
+
+<%= link_to "Back", artists_path, class: "btn btn-default" %>
