@@ -32,3 +32,5 @@
 
 <%= link_to "Back", artists_path, class: "btn btn-default" %>
 <%= link_to "Add song", new_artist_song_path(@artist.id), class: "btn btn-default" %>
+
+<%= link_to "Delete the artist", artist_path(@artist.id), class: "btn btn-default", method: :delete, data: { confirm: "Are you sure?" } %>
