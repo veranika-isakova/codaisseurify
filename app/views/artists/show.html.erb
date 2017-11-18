@@ -19,15 +19,19 @@
     <h4>List of songs</h4>
     <hr>
     <% @artist.songs.each do |song| %>
-    <div id="<%= song.id %>">
+    <div id="<%= song.id %>" class="song">
       <p>Name of the song: <%= song.song_name %></p>
       <p>Album: <%= song.album_name %></p>
       <p>Released: <%= song.release_date %></p>
       <a href="#" class="btn btn-primary delete_song" role="button">Delete song</a>
       <hr>
     </div>
-    
     <% end %>
+
+    <div>
+    <a href="#" class="btn btn-primary delete_all_songs" role="button">Delete all songs</a>
+  </div>
+
   </div>
 
 </div>

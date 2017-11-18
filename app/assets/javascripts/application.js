@@ -24,3 +24,18 @@ function deleteSong(songId) {
     $('div#'+songId).remove();
   });
 }
+
+//All songs
+
+$(document).ready(function() {
+  $("a.delete_all_songs").bind('click', deleter_all_songs);
+});
+
+function deleter_all_songs() {
+  var songs = $(".song");
+  var songCount = songs.length;
+  for (var i = 0; i < songCount; i++) {
+    var song = songs[i];
+    deleteSong( $(song).attr('id') );
+  }
+}
