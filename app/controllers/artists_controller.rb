@@ -8,31 +8,6 @@ class ArtistsController < ApplicationController
     @artist = Artist.find(params[:id])
   end
 
-  def new
-    @artist = Artist.new
-  end
-
-  def create
-    @artist = Artist.new(artist_params)
-    if @artist.save
-      redirect_to @artist, notice: "Artist created"
-    else
-      render :new
-    end
-  end
-
-  def edit
-    @artist = Artist.find(params[:id])
-  end
-
-  def update
-    if @artist.update(artist_params)
-      redirect_to @artist, notice: "Artist updated"
-    else
-      render :edit
-    end
-  end
-
   def destroy
     @artist = Artist.find(params[:id])
     @artist.destroy

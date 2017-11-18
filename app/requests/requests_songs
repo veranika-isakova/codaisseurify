@@ -1,0 +1,15 @@
+curl \
+-i \
+-H "Accept: application/json" \
+-H "Content-type: application/json" \
+-X DELETE \
+http://localhost:3000/api/songs/6
+
+
+curl \
+-i \
+-H "Accept: application/json" \
+-H "Content-type: application/json" \
+-X POST \
+-d '{"song_name":"BlaBlaBla", "album_name":"Sun", "release_date":1989, "artist_id": 1}' \
+http://localhost:3000/api/songs
