@@ -19,13 +19,15 @@
     <h4>List of songs</h4>
     <hr>
     <% @artist.songs.each do |song| %>
-    <p>Name of the song: <%= song.song_name %></p>
-    <p>Album: <%= song.album_name %></p>
-    <p>Released: <%= song.release_date %></p>
-    <%= link_to "Delete", artist_song_path(@artist.id, song.id), class: "btn btn-default", method: :delete, data: { confirm: "Are you sure?" } %>
-    <hr>
+    <div id="<%= song.id %>">
+      <p>Name of the song: <%= song.song_name %></p>
+      <p>Album: <%= song.album_name %></p>
+      <p>Released: <%= song.release_date %></p>
+      <a href="#" class="btn btn-primary delete_song" role="button">Delete song</a>
+      <hr>
+    </div>
+    
     <% end %>
-
   </div>
 
 </div>
