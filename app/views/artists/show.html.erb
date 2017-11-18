@@ -29,14 +29,20 @@
     <% end %>
 
     <div>
-    <a href="#" class="btn btn-primary delete_all_songs" role="button">Delete all songs</a>
-  </div>
+      <a href="#" class="btn btn-primary delete_all_songs" role="button">Delete all songs</a>
+    </div>
 
+    <div class="form_for_new_song">
+      <h4 class="page-header">Do you want to add new song? Let's do it!</h4>
+
+      <%= render "form", song: @song %>
+
+    </div>
   </div>
 
 </div>
 
+
 <%= link_to "Back", artists_path, class: "btn btn-default" %>
-<%= link_to "Add song", new_artist_song_path(@artist.id), class: "btn btn-default" %>
 
 <%= link_to "Delete the artist", artist_path(@artist.id), class: "btn btn-default", method: :delete, data: { confirm: "Are you sure?" } %>

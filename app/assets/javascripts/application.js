@@ -3,6 +3,8 @@
 
 //= require jquery_ujs
 //= require_tree .
+
+// One song
 $(document).ready(function() {
   $("a.delete_song").bind('click', deleter);
 });
@@ -25,7 +27,7 @@ function deleteSong(songId) {
   });
 }
 
-//All songs
+// All songs
 
 $(document).ready(function() {
   $("a.delete_all_songs").bind('click', deleter_all_songs);
@@ -39,3 +41,5 @@ function deleter_all_songs() {
     deleteSong( $(song).attr('id') );
   }
 }
+
+// Add song
