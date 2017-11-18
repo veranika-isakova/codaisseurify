@@ -17,18 +17,6 @@ class SongsController < ApplicationController
     end
   end
 
-  def edit
-    @song = Song.find(params[:id])
-  end
-
-  def update
-    if @song.update(song_params)
-      redirect_to @song, notice: "Song updated"
-    else
-      render :edit
-    end
-  end
-
   def destroy
     @song = Song.find(params[:id])
     @song.destroy
