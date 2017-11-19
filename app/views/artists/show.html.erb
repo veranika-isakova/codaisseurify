@@ -18,15 +18,17 @@
     <!-- List of songs -->
     <h4>List of songs</h4>
     <hr>
-    <% @artist.songs.each do |song| %>
-    <div id="<%= song.id %>" class="song">
-      <p>Name of the song: <%= song.song_name %></p>
-      <p>Album: <%= song.album_name %></p>
-      <p>Released: <%= song.release_date %></p>
-      <a href="#" class="btn btn-primary delete_song" role="button">Delete song</a>
-      <hr>
+    <div id="songs_all">
+      <% @artist.songs.each do |song| %>
+      <div id="<%= song.id %>" class="song">
+        <p>Name of the song: <%= song.song_name %></p>
+        <p>Album: <%= song.album_name %></p>
+        <p>Released: <%= song.release_date %></p>
+        <a href="#" class="btn btn-primary delete_song" role="button">Delete song</a>
+        <hr>
+      </div>
+      <% end %>
     </div>
-    <% end %>
 
     <div>
       <a href="#" class="btn btn-primary delete_all_songs" role="button">Delete all songs</a>
@@ -35,7 +37,7 @@
     <div class="form_for_new_song">
       <h4 class="page-header">Do you want to add new song? Let's do it!</h4>
 
-      <%= render "form", song: @song %>
+      <%= render "form", song: @song, artist_id: @artist.id %>
 
     </div>
   </div>
