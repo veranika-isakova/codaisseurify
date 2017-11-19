@@ -18,19 +18,33 @@
     <!-- List of songs -->
     <h4>List of songs</h4>
     <hr>
-    <% @artist.songs.each do |song| %>
-    <p>Name of the song: <%= song.song_name %></p>
-    <p>Album: <%= song.album_name %></p>
-    <p>Released: <%= song.release_date %></p>
-    <%= link_to "Delete", artist_song_path(@artist.id, song.id), class: "btn btn-default", method: :delete, data: { confirm: "Are you sure?" } %>
-    <hr>
-    <% end %>
+    <div id="songs_all">
+      <% @artist.songs.each do |song| %>
+      <div id="<%= song.id %>" class="song">
+        <p>Name of the song: <%= song.song_name %></p>
+        <p>Album: <%= song.album_name %></p>
+        <p>Released: <%= song.release_date %></p>
+        <a href="#" class="btn btn-primary delete_song" role="button">Delete song</a>
+        <hr>
+      </div>
+      <% end %>
+    </div>
 
+    <div>
+      <a href="#" class="btn btn-primary delete_all_songs" role="button">Delete all songs</a>
+    </div>
+
+    <div class="form_for_new_song">
+      <h4 class="page-header">Do you want to add new song? Let's do it!</h4>
+
+      <%= render "form", song: @song, artist_id: @artist.id %>
+
+    </div>
   </div>
 
 </div>
 
+
 <%= link_to "Back", artists_path, class: "btn btn-default" %>
-<%= link_to "Add song", new_artist_song_path(@artist.id), class: "btn btn-default" %>
 
 <%= link_to "Delete the artist", artist_path(@artist.id), class: "btn btn-default", method: :delete, data: { confirm: "Are you sure?" } %>
