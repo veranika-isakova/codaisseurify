@@ -11,7 +11,7 @@ class Api::SongsController < ApplicationController
   song.destroy
 
   render status: 200, json: {
-    message: "Song successfully deleted"
+    message: "Song successfully deleted" #data
   }.to_json
   end
 
@@ -20,7 +20,7 @@ class Api::SongsController < ApplicationController
 
       if song.save
         render status: 201, json: {
-          message: "Song successfully created",
+          message: "Song successfully created", #data = message + song
           song: song
         }.to_json
       else

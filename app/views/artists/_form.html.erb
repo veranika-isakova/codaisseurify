@@ -1,4 +1,4 @@
-<%= form_for song, url: { action: "index" } do |f| %>
+<%= form_for song, url: { action: "index" } do |f| %> <!-- don't have create for artist, instead of this - index -->
   <div class="form-group <%= song.errors.any? ? 'has-error' : '' %>" id="formgroup-title">
     <div class="form-group">
   <label>Name of the song</label>
@@ -18,7 +18,7 @@
   <%= f.submit "Save", class: "btn btn-primary" %>
 </div>
 <div id='artist_id'>
-  <%= f.hidden_field :artist_id, value: artist_id %>
+  <%= f.hidden_field :artist_id, value: artist_id %> <!-- from show.thml.erb -->
 </div>
 
     <% if song.errors.any? %>
