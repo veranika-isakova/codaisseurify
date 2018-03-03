@@ -1,24 +1,12 @@
-# README
+# Сodaisseurify
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Here you can see the deployed version](https://codaisseurify2017isakova.herokuapp.com/)
 
-Things you may want to cover:
+A Ruby on Rails program that allows user, after sign up and log in, to see the artist's information: the country, the official site, biography and all songs related to this artist. 
 
-* Ruby version
+If, for some reason, the user wants to delete the artist from the list, he/she can do it clicking on the button.
 
-* System dependencies
+You can delete a particular song or all songs together, add new song and save it to the specific artist.
 
-* Configuration
+[![](https://github.com/veranika-isakova/codaisseurify/blob/master/images/screenshot.png?raw=true)](https://github.com/veranika-isakova/codaisseurify/blob/master/images/screenshot.png?raw=true)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
